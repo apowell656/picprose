@@ -1,0 +1,9 @@
+services:
+  picprose:
+    build: .
+    container_name: picprose
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "8099:3000"
